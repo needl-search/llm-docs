@@ -1,6 +1,6 @@
 {
   "$schema": "https://mintlify.com/schema.json",
-  "name": "Documentation Starter Kit",
+  "name": "Needl LLM Testing",
   "logo": {
     "dark": "/logo/dark.png",
     "light": "/logo/light.png"
@@ -11,49 +11,55 @@
     "light": "#4D9CFF",
     "dark": "#0050B4"
   },
-  "topbarLinks": [
-    {
-      "name": "Documentation",
-      "url": "https://mintlify.com/docs"
-    }
-  ],
   "topbarCtaButton": {
     "name": "Get Started",
-    "url": "https://github.com/mintlify/starter"
+    "url": "https://llm-frontend-sigma.vercel.app"
   },
   "anchors": [
     {
       "name": "API Reference",
       "icon": "rectangle-terminal",
       "url": "api-reference"
-    },
-    {
-      "name": "Changelog",
-      "icon": "list",
-      "url": "https://mintlify.com"
-    },
-    {
-      "name": "Community",
-      "icon": "discord",
-      "url": "https://mintlify.com/community"
     }
   ],
   "navigation": [
     {
       "group": "Home",
-      "pages": ["introduction", "features"]
+      "pages": ["introduction", "key-concepts"]
     },
     {
       "group": "API Documentation",
       "pages": ["api-reference/authentication"]
     },
     {
-      "group": "Endpoint Examples",
+      "group": "Suites API",
       "pages": [
-        "api-reference/endpoint/get",
-        "api-reference/endpoint/create",
-        "api-reference/endpoint/update",
-        "api-reference/endpoint/delete"
+        "api-reference/suites/get",
+        "api-reference/suites/get_single",
+        "api-reference/suites/create",
+        "api-reference/suites/update",
+        "api-reference/suites/delete"
+      ]
+    },
+    {
+      "group": "Cases API",
+      "pages": [
+        "api-reference/cases/get",
+        "api-reference/cases/get_single",
+        "api-reference/cases/create",
+        "api-reference/cases/update",
+        "api-reference/cases/delete"
+      ]
+    },
+    {
+      "group": "Runs API",
+      "pages": [
+        "api-reference/runs/get",
+        "api-reference/runs/get_single",
+        "api-reference/runs/get_details",
+        "api-reference/runs/create",
+        "api-reference/runs/update",
+        "api-reference/runs/delete"
       ]
     }
   ],

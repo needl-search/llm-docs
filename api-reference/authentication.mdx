@@ -1,22 +1,14 @@
 ---
 title: "Authentication"
-description: "Example overview page before API endpoints"
+description: "Authenticating with the Needl Platform"
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas et eros iaculis tortor dapibus cursus. Curabitur quis sapien nec tortor dictum gravida.
+To use Needl directly through the API, visit the Needl dashboard to generate an API key. This a secret key that you should make sure is never exposed. You can then include this key on your requests in the `Authorization` header like so:
 
 ```bash
-'Authorization': 'Token <team_token>'
+'Authorization': 'Bearer <team_token>'
 ```
-
-## API Tokens
-
-Nullam convallis mauris at nunc consectetur, ac imperdiet leo rutrum. Maecenas cursus purus a pellentesque blandit. Pellentesque vitae lacinia libero, non mollis metus.
-
-Nam id ullamcorper urna, at rutrum enim. [Maecenas vulputate](/introduction) vehicula libero, vitae sodales augue pretium nec. Quisque a magna tempor, semper risus vel, fermentum nunc. Pellentesque fermentum interdum ex, eu convallis massa blandit sed. Aliquam bibendum ipsum vel laoreet auctor.
 
 ### Permissions
 
-Etiam lobortis ut odio ut fermentum. Nunc odio velit, sollicitudin at consectetur id, tristique eget turpis. Aliquam at risus vitae dolor sodales venenatis. In hac habitasse platea dictumst.
-
-Aenean consequat diam eget mollis fermentum. [Quisque eu malesuada](/introduction) felis, non dignissim libero.
+Currently, all members of your organization that you grant access to the Needl platform will have access to all Needl API endpoints. If you require more fine-grained access control, shoot us an email at james@needl.tech
