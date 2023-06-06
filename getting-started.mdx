@@ -20,7 +20,7 @@ Using Needl, we can evaluate the effectiveness of this prompt, and compare diffe
 
 ## Suites
 
-The first step to using Needl is to create a Test Suite. Suites are in a nutshell just collections of test cases. By testing new prompt and model variations against a range of test cases, we can get a better sense of what prompt produces the best results rather than just guessing. 
+The first step to using Needl is to create a Test Suite. A Test Suite is the core function you're aiming to test, i.e., Q&A search.  Test suites are collections of test cases. By testing new prompt and model variations against a range of test cases, we get a better sense of what prompt produces the best results. 
 
 For our example above, let's create a Suite with the following parameters:
 
@@ -31,12 +31,12 @@ For our example above, let's create a Suite with the following parameters:
 }
 ```
 
-`required_inputs` refers to the variables contained within the prompt. This ensure that all test cases included will work with any new prompts we test. If our test cases did not include any documents for example, it would not make sense in this instance.
+`required_inputs` refers to the variables contained within the prompt. This ensure that all Test Cases included will work with any new prompts we test. If our test cases did not include any documents for example, it would not make sense in this instance.
 
 
 
 ## Test Cases
-Now that we have a suite, we need to add some test cases to it to get started. A test case is a possible usage of our prompt that we want to validate produces our desired output. For example for our use case above, a simple test case might look like:
+Now that we have a Suite, we need to add some Test Cases. A Test Case is an example usage of our prompt that we want to validate produces a desired output. For example for our use case above, a simple test case might look like:
 
 ```json
 {
@@ -61,13 +61,13 @@ Now that we have a suite, we need to add some test cases to it to get started. A
     - `regex`: A regex pattern that the LLM response should match
     - `tone`: The tone you want the response to have
     - `task`: Describe the task you want the LLM to perform. We will evaluate whether or not the task was performed or not according to the specification
-    - `ground_truth`: Provide a response that you consider to be the correct response to the question. We will compare your provided ground truth to the LLM output and determine if there is hallucinated information, or missing information
+    - `ground_truth`: Provide a response that you consider to be the correct response to the question. We will compare your provided ground truth to the LLM output and determine if there is hallucinated or missing information
 
 For each criteria, you can also include a `weight` parameter. If you have multiple evaluation criteria, and you want the tone of the response to affect the score less than whether the response is accurate based on the ground truth, you can give the ground truth criteria a higher weight.
 
 ## Runs
 
-Now that we've added a couple of test cases, we can run them against different prompts! Runs are variations of the prompt and model combinations that you want to test. When you create a run, Needl will run all tests in the targeted suite on the prompt iteration. Runs give you several factors to adjust:
+A Run is the specific prompt / model combination you want to evaluate. After adding Test Cases, Runs execute the associated Test Cases and automatically evaluate the output quality. Runs give you several factors to adjust:
 
 ```json
 {
@@ -86,4 +86,4 @@ Now that we've added a couple of test cases, we can run them against different p
 }
 ```
 
-Needl will run the tests in the targeted suite, evaluate the criteria, and output a score which you can then use to determine what variation of your prompt performs the best. You can drill down to see exactly which test cases are problematic, or use the overarching scores to determine what prompt is performing best. Needl will also keep track of other factors such as latency, and number of tokens so you can take into account other factors when making your decision.
+Needl will run the tests in the targeted Suite, evaluate the criteria, and output a score which you can then use to determine what variation of your prompt performs the best. You can drill down to see exactly which test cases are problematic, or use the overarching scores to determine what prompt is performing best. Needl will also keep track of other factors such as latency and number of tokens, so you can take into account other factors when making your decision.
