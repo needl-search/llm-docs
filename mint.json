@@ -22,10 +22,19 @@
       "url": "api-reference"
     }
   ],
+  "api": {
+    "auth": {
+      "method": "bearer"
+    },
+    "playground": {
+      "mode": "show"
+    }
+  },
+  "openapi": "https://llm.needl.tech/openapi.json",
   "navigation": [
     {
       "group": "Home",
-      "pages": ["introduction", "key-concepts"]
+      "pages": ["introduction", "getting-started"]
     },
     {
       "group": "API Documentation",
@@ -58,7 +67,6 @@
         "api-reference/runs/get_single",
         "api-reference/runs/get_details",
         "api-reference/runs/create",
-        "api-reference/runs/update",
         "api-reference/runs/delete"
       ]
     }

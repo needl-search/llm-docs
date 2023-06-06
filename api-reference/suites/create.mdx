@@ -1,17 +1,8 @@
 ---
 title: "Create Suite"
-api: "POST https://llm.needl.tech/suites"
+openapi: "POST /suites"
 description: "This endpoint creates a new test suite"
 ---
-
-### Body
-
-<ParamField body="name" type="string">
-  The display name for this test suite.
-</ParamField>
-<ParamField body="required_inputs" type="string[]">
-  The input variables required for any test cases added to this suite
-</ParamField>
 
 <RequestExample>
 
