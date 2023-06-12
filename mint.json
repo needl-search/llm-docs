@@ -61,7 +61,7 @@
       ]
     },
     {
-      "group": "Runs API",
+      "group": "Prompts API",
       "pages": [
         "api-reference/runs/get",
         "api-reference/runs/get_single",
