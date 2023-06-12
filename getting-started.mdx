@@ -65,9 +65,9 @@ Now that we have a Suite, we need to add some Test Cases. A Test Case is an exam
 
 For each criteria, you can also include a `weight` parameter. If you have multiple evaluation criteria, and you want the tone of the response to affect the score less than whether the response is accurate based on the ground truth, you can give the ground truth criteria a higher weight.
 
-## Runs
+## Prompts
 
-A Run is the specific prompt / model combination you want to evaluate. After adding Test Cases, Runs execute the associated Test Cases and automatically evaluate the output quality. Runs give you several factors to adjust:
+A Prompt is the specific instructions given to each AI-model. After adding Test Cases, run a Prompt for the associated Test Cases to automatically evaluate the output quality. Prompts give you several factors to adjust:
 
 ```json
 {
@@ -86,4 +86,4 @@ A Run is the specific prompt / model combination you want to evaluate. After add
 }
 ```
 
-Needl will run the tests in the targeted Suite, evaluate the criteria, and output a score which you can then use to determine what variation of your prompt performs the best. You can drill down to see exactly which test cases are problematic, or use the overarching scores to determine what prompt is performing best. Needl will also keep track of other factors such as latency and number of tokens, so you can take into account other factors when making your decision.
+Needl will run the Prompt for the targeted Suite, evaluate the criteria, and output a score which you can then use to determine which variation of your prompt performs the best. You can drill down to see exactly which test cases are problematic, or use the overarching scores to determine what prompt is performing best. Needl will also keep track of other factors such as latency and number of tokens, so you can take into account other factors when making your decision.
